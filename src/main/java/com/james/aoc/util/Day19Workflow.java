@@ -1,47 +1,50 @@
 package com.james.aoc.util;
 
-import java.util.Objects;
-
 public class Day19Workflow {
 
-	private String part;
-	private String comparison; //< or >
-	private String output; //New map or A or R
+	private Day19PartType partType;
+	private String compareType;
+	private int compareValue; //< or >
+	private String result; //New map or A or R
 	
-	public Day19Workflow(String part, String comparison, String output) {
-		this.part = part;
-		this.comparison = comparison;
-		this.output = output;
+	public Day19Workflow(String partType, String compareType, int compareValue, String result) {
+		switch (partType) {
+		case "x":
+			this.partType = Day19PartType.X;
+			break;
+		case "m":
+			this.partType = Day19PartType.M;
+			break;
+		case "a":
+			this.partType = Day19PartType.A;
+			break;
+		case "s":
+			this.partType = Day19PartType.S;
+			break;
+		default:
+			System.out.println("Bad part type....check code ....");
+		}
+		this.compareType = compareType;
+		this.compareValue = compareValue;
+		this.result = result;
 	}
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(comparison, output, part);
+	public Day19PartType getPartType() {
+		return partType;
 	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Day19Workflow other = (Day19Workflow) obj;
-		return Objects.equals(comparison, other.comparison) && Objects.equals(output, other.output)
-				&& Objects.equals(part, other.part);
+	public String getCompareType() {
+		return compareType;
 	}
 
-	public String getPart() {
-		return part;
+	public int getCompareValue() {
+		return compareValue;
 	}
 
-	public String getComparison() {
-		return comparison;
+	public String getResult() {
+		return result;
 	}
-
-	public String getOutput() {
-		return output;
-	}
+	
+	
 	
 }

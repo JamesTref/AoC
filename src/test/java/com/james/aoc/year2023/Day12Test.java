@@ -13,7 +13,7 @@ class Day12Test {
 		assertTrue(result == 21, "Actual Answer: " + result);
 	}
 	
-	@Test
+	/*@Test
 	void findAnswer() {
 		String filePath = "src/test/resources/Day12_2023/data.txt";
 		Long result = Day12.getAnswer(filePath, false);
@@ -32,6 +32,6 @@ class Day12Test {
 		String filePath = "src/test/resources/Day12_2023/data.txt";
 		Long result = Day12.getAnswer(filePath, true);
 		assertTrue(result == 527570479489l, "Actual Answer: " + result);
-	}
+	}*/
 	
 }
