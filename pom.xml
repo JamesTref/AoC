@@ -3,6 +3,18 @@
 	<groupId>com.james.aoc</groupId>
 	<artifactId>test</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>19</source>
+                    <target>19</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
@@ -14,5 +26,10 @@
 			<artifactId>commons-math3</artifactId>
 			<version>3.6.1</version>
 		</dependency>
+		<dependency>
+            <groupId>com.google.mug</groupId>
+            <artifactId>mug</artifactId>
+            <version>6.5</version>
+        </dependency>
 	</dependencies>
 </project>
